@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mom I'm Fine.</title>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+		<style> 
+			#button {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: -50px 0 0 -50px;
+				width: 200px;
+				height: 200px;
+				border-radius: 100px;
+				background-color: red;
+			}
+			#text {
+				padding-top: 70px;
+  				padding-bottom: 30px;
+				color: white;
+				font-family: 'Roboto', sans-serif;
+				font-weight: 100;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+		</style>
+	</head>
+	<body>
+		<audio id="audio">
+			<source src="MomImFine.mp3" type="audio/mp3">
+		</audio>
+		<center>
+			<div id="button" style="box-shadow: 8px 8px 0px #a81600;" onclick="clicked ();">
+				<h2 id="text">Mom I'm Fine.</h2>
+			</div>
+		</center>
+		<script>
+			function clicked () {
+				document.getElementById ("button").style = "box-shadow: 2px 2px 0px #a81600; top: 50.5%; left: 50.5%;";
+				document.getElementById ("audio").play ();
+				setTimeout (unClick, 500);
+			}
+			function unClick () {
+				document.getElementById ("button").style = "box-shadow: 8px 8px 0px #a81600; top: 50%; left: 50%;";
+			}
+		</script>
+	</body>
+</html>
