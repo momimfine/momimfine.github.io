@@ -51,14 +51,20 @@
 			</div>
 		</center>
 		<script>
+			var button = document.getElementById ("button");
+			
 			function clicked () {
-				document.getElementById ("button").style = "box-shadow: 2px 2px 0px #a81600; top: 50.1%; left: 50.1%;";
+				button.style.top = "50.1%";
+				button.style.left = "50.1%";
+				button.style.boxShadow = "2px 2px 0px #a81600";
 				document.getElementById ("audio").load ();
 				document.getElementById ("audio").play ();
 				setTimeout (unClick, 500);
 			}
 			function unClick () {
-				document.getElementById ("button").style = "box-shadow: 8px 8px 0px #a81600; top: 49.6%; left: 49.6%;";
+				button.style.top = "49.6%";
+				button.style.left = "49.6%";
+				button.style.boxShadow = "8px 8px 0px #a81600";
 			}
 		</script>
 	</body>
